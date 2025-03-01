@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Nursery</title>
+
+    <!-- Description -->
+    <meta
+      name="description"
+      content="The Nursery is a business in Garry's Mod DarkRP server by Garnet Gaming. We protect money printers and spread the word of God in a fun, engaging gaming environment."
+    />
+
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="Garry's Mod, DarkRP, money printers, protect money printers, The Nursery, GarnetGaming.net, spreading the word of God, gaming business"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="RancorSweetly" />
+
+    <!-- Open Graph Meta Tags (for better social media sharing) -->
+    <meta
+      property="og:title"
+      content="The Nursery - Grow Your Assets | GarnetGaming.net"
+    />
+    <meta
+      property="og:description"
+      content="The Nursery is a business in Garry's Mod DarkRP server by Garnet Gaming. We protect money printers and spread the word of God in a fun, engaging gaming environment."
+    />
+    <meta property="og:image" content="images/social-image.webp" />
+    <meta property="og:url" content="https://nursery.rancorsweetly.rf.gd/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="The Nursery - Grow Your Assets. Owned by RancorSweetly & La Lune."
+    />
+    <meta
+      name="twitter:description"
+      content="The Nursery is a business in Garry's Mod DarkRP server by Garnet Gaming. We protect money printers and spread the word of God in a fun, engaging gaming environment."
+    />
+    <meta name="twitter:image" content="images/social-image.jpg" />
+    <meta name="twitter:site" content="@RancorSweetly" />
+    <meta name="twitter:creator" content="@RancorSweetly" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">The Nursery</h1>
+      <h2 id="subtitle">Grow Your Assets</h2>
+      <hr>
+      <h3 id="bible-quote" class="bible-text">"Dishonest money dwindles away, <br>but whoever gathers money little by little <br><b class="green">makes it grow</b>." <br><span class="muted small-text">- Proverbs 13:11 NIV</span></h3>
+      <hr>
+    </header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#members">Members</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="image">
+        <img src="images/nursery.webp" width="540px" alt="Nursery" />
+      </section>
+      <section id="members">
+        <h3>Members</h3>
+        <div class="members-container">
+          <div class="members"></div>
+        </div>
+      </section>
+      <section id="leaderboard">
+        <h3>Top Cultivators</h3>
+        <div class="leaderboard-container">
+          <ul id="top-earners">
+          </ul>
+        </div>
+      </section>
+      <section id="reviews">
+        <h3>Reviews</h3>
+        <!-- SORT BY - sort reviews options -->
+        <div class="sort-by">
+          <label for="sort-by">SORT BY:</label>
+          <select id="sort-by">
+            <option value="popularity" default>POPULARITY</option>
+            <option value="date">DATE</option>
+          </select>
+        </div>
+        <div id="reviews-container"></div>
+        <a href="#" class="more-reviews">Read More Reviews</a>
+      </section>
+      <section id="about">
+        <h3>What Is The Nursery?</h3>
+        <div class="about-container">
+          <div class="text">
+            <p>A place to store your money printers!</p>
+          </div>
+          <div class="image">
+            <img src="images/money-printers.webp" alt="Money Printers" />
+          </div>
+        </div>
+        <h3>Why Do We Do It?</h3>
+        <div class="about-container">
+          <div class="image">
+            <img src="images/lune-dance.gif" alt="La Lune dancing" />
+          </div>
+          <div class="text">
+            <p>Helping the community while spreading the Word of God ✝</p>
+          </div>
+        </div>
+        <h3>How Do We Make Money?</h3>
+        <div class="card-container">
+          <button id="prev-btn">&lt;</button>
+          <div class="cards"></div>
+          <button id="next-btn">&gt;</button>
+          <div class="dots"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>The Nursery © 2025. All rights reserved.</p>
+    </footer>
+  </body>
+  <script type="module" src="scripts/main.js"></script>
+</html>

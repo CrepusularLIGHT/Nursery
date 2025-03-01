@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "image": "images/user.png",
+        "username": "RancorSweetly",
+        "role": "Founder, CEO (Chief Executive Officer)",
+        "bio": "Passionate entrepreneur, builds businesses rooted in God's principles, striving to uplift the community through faith-driven leadership. 🌱🙏"
+    },
+    {
+        "id": 2,
+        "image": "images/user.png",
+        "username": "La Lune",
+        "role": "Founder, COO (Chief Organization Officer)",
+        "bio": "Oversees business operations with precision, managing the money printers and tracking customer earnings. 🌙📊"
+    },
+    {
+        "id": 3,
+        "image": "images/user.png",
+        "username": "Donnie Deru",
+        "role": "Co-Founder, CMO (Chief Marketing Officer)",
+        "bio": "Connects The Nursery to the right people, crafting impactful advertisements and building powerful relationships to fuel growth. 📢🌱"
+    }
+]

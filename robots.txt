@@ -1,0 +1,22 @@
+# Allow all bots to crawl all content except for sensitive areas like admin or login pages
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+
+# Allow Facebook's scraper to crawl all content
+User-agent: facebookexternalhit
+Disallow:
+
+# Allow Googlebot and other common bots to crawl all content
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+User-agent: Slurp
+Disallow:
+
+# Block all other bots (optional)
+User-agent: BadBot
+Disallow: /

@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0px 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-family: "montserrat";
+  background-color: #ffffff;
+  color: #000000;
+}
+
+header {
+  text-align: center;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header #title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+}
+header #subtitle {
+  font-size: 20px;
+  color: #000;
+  font-style: italic;
+}
+header #bible-quote {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+nav {
+  padding: 4px 0;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+nav .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav .navbar a {
+  display: inline-block;
+  color: #333;
+  background-color: #f9f9f9;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  border: 1px outset #000;
+  box-sizing: content-box;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+nav .navbar a:hover {
+  background-color: #ccc;
+}
+nav .navbar a:active {
+  background-color: #777;
+  color: #f9f9f9;
+}
+
+#image {
+  max-width: 420px;
+  margin: 2px auto;
+}
+#image img {
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#members {
+  text-align: center;
+  width: 420px;
+  margin: 2px auto;
+  padding-top: 4px;
+}
+#members .members-container {
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #f9f9f9, #ccc);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 8px;
+  cursor: pointer;
+}
+#members .members-container .members .member {
+  display: flex;
+}
+#members .members-container .members .member .image {
+  border-radius: 50%;
+  padding: 2px 16px;
+}
+#members .members-container .members .member .image img {
+  height: auto;
+  width: 32px;
+  border-radius: 50%;
+}
+#members .members-container .members .member .details {
+  margin-left: 8px;
+  font-size: 14px;
+  text-align: left;
+  padding-right: 8px;
+  padding-bottom: 8px;
+}
+#members .members-container .members .member .details .name {
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 0;
+}
+#members .members-container .members .member .details .role {
+  font-size: 12px;
+  font-style: italic;
+}
+#members .members-container .members .member .details .bio {
+  font-size: 10px;
+}
+
+#leaderboard {
+  text-align: center;
+  margin: 8px 0px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 420px;
+}
+#leaderboard .leaderboard-container {
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #f9f9f9, #ccc);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+#leaderboard .leaderboard-container #top-earners {
+  list-style: none;
+  padding: 4px 0;
+}
+#leaderboard .leaderboard-container #top-earners .earners {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 16px;
+  margin: 2px 0;
+  font-size: 12px;
+  border-radius: 4px;
+  align-items: center;
+}
+#leaderboard .leaderboard-container #top-earners .earners:first-child {
+  background: gold;
+  background: linear-gradient(to right, gold, rgb(255, 240, 152));
+}
+#leaderboard .leaderboard-container #top-earners .earners:nth-child(2) {
+  background: silver;
+  background: linear-gradient(to right, silver, rgb(228, 228, 228));
+}
+#leaderboard .leaderboard-container #top-earners .earners:nth-child(3) {
+  background: #cd7f32;
+  background: linear-gradient(to right, #cd7f32, #dcae81);
+}
+#leaderboard .leaderboard-container #top-earners .earners:hover {
+  transform: scale(1.05);
+}
+#leaderboard .leaderboard-container #top-earners .earners .position {
+  width: 32px;
+  text-align: left;
+}
+#leaderboard .leaderboard-container #top-earners .earners .username {
+  font-weight: bold;
+  font-size: 14px;
+  flex: 1;
+  text-align: left;
+}
+#leaderboard .leaderboard-container #top-earners .earners .rank {
+  padding-right: 16px;
+}
+#leaderboard .leaderboard-container #top-earners .earners .profit {
+  color: green;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+#reviews {
+  text-align: center;
+  margin: 8px 0px;
+}
+#reviews .sort-by {
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+#reviews .sort-by select {
+  font-size: 9px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#reviews .review {
+  display: grid;
+  grid-template-areas: "author rating" "comment comment" "popularity date";
+  grid-template-columns: 1fr auto;
+  gap: 5px;
+  margin-bottom: 4px;
+  border: 1px solid #ccc;
+  padding: 4px 16px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  font-size: 12px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+#reviews .review .author {
+  font-weight: bold;
+  font-size: 11px;
+  grid-area: author;
+  text-align: left;
+}
+#reviews .review .rating {
+  grid-area: rating;
+  font-size: 10px;
+}
+#reviews .review .comment {
+  grid-area: comment;
+  font-size: 11px;
+}
+#reviews .review .date {
+  font-size: 8px;
+  color: #777;
+  grid-area: date;
+  text-align: right;
+}
+#reviews .review .popularity {
+  font-size: 9px;
+  color: #777;
+  grid-area: popularity;
+  text-align: left;
+}
+#reviews .more-reviews {
+  font-size: 11px;
+}
+
+#about {
+  text-align: center;
+  margin: 8px 0px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+}
+#about .about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 4px 0px;
+}
+#about .about-container img {
+  max-width: 200px;
+}
+#about .card-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+#about .card-container #prev-btn,
+#about .card-container #next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #777;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#about .card-container #prev-btn {
+  left: 10px;
+}
+#about .card-container #next-btn {
+  right: 10px;
+}
+#about .card-container .cards {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  max-width: 200px;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  transition: transform 0.4s ease-in-out;
+}
+#about .card-container .cards .card {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px outset black;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  transition: transform 0.4s ease-in-out;
+}
+#about .card-container .cards .card .clone {
+  visibility: hidden;
+}
+#about .card-container .cards .card h4 {
+  margin-bottom: 4px;
+  background-color: #ccc;
+  width: 100%;
+}
+#about .card-container .dots {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+#about .card-container .dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.2s ease-in-out;
+}
+#about .card-container .dots .dot.active {
+  background-color: #777;
+}
+
+footer {
+  text-align: center;
+  padding: 8px 0px;
+  font-size: 9px;
+}
+
+.small-text {
+  font-size: 10px;
+}
+
+.bible-text {
+  font-family: "minion pro";
+}
+
+.green {
+  color: green;
+}
+
+.muted {
+  color: #777;
+}
+
+/*# sourceMappingURL=styles.css.map */
