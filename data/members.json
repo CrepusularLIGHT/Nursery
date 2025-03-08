@@ -8,7 +8,7 @@
     },
     {
         "id": 2,
-        "image": "images/user.png",
+        "image": "images/lalune_2.jpg",
         "username": "La Lune",
         "role": "Founder, COO (Chief Organization Officer)",
         "bio": "Oversees business operations with precision, managing the money printers and tracking customer earnings. 🌙📊"
@@ -19,5 +19,12 @@
         "username": "Donnie Deru",
         "role": "Co-Founder, CMO (Chief Marketing Officer)",
         "bio": "Connects The Nursery to the right people, crafting impactful advertisements and building powerful relationships to fuel growth. 📢🌱"
+    },
+    {
+        "id": 4,
+        "image": "images/not10crabs.jpg",
+        "username": "Not10crabs",
+        "role": "Partner, CDO (Chief Development Officer)",
+        "bio": "Drives innovation & growth, expanding new services like DJ music, developing relations, while ensuring a safe and protected environment for all. 🎵🛡️"
     }
 ]

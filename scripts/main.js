@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadCards();
     await loadReviews();
     await loadMembers();
-    
+
+    const cards = document.querySelectorAll(".card");
     if (cards.length > 0) {
         initCarousel();
     } else {

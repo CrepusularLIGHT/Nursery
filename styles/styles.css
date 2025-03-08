@@ -97,22 +97,34 @@ nav .navbar a:active {
   padding-top: 8px;
   cursor: pointer;
 }
+#members .members-container .members {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 0 8px 4px 8px;
+}
 #members .members-container .members .member {
-  display: flex;
+  margin: 2px 0px;
+  padding: 4px 4px;
+  background-color: white;
+  background: linear-gradient(to top, #f9f9f9, #ccc);
+  border-radius: 8px;
+  border: 1px outset #f9f9f9;
 }
 #members .members-container .members .member .image {
   border-radius: 50%;
   padding: 2px 16px;
 }
 #members .members-container .members .member .image img {
-  height: auto;
+  height: 32px;
   width: 32px;
+  object-fit: cover;
   border-radius: 50%;
 }
 #members .members-container .members .member .details {
   margin-left: 8px;
   font-size: 14px;
-  text-align: left;
+  text-align: center;
   padding-right: 8px;
   padding-bottom: 8px;
 }
@@ -122,8 +134,10 @@ nav .navbar a:active {
   padding-left: 0;
 }
 #members .members-container .members .member .details .role {
-  font-size: 12px;
+  font-size: 8px;
   font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 #members .members-container .members .member .details .bio {
   font-size: 10px;
