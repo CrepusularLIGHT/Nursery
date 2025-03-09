@@ -137,10 +137,17 @@ nav .navbar a:active {
   font-size: 8px;
   font-style: italic;
   text-transform: uppercase;
+  margin-top: 2px;
   margin-bottom: 4px;
 }
 #members .members-container .members .member .details .bio {
   font-size: 10px;
+}
+#members .members-container .members .member:hover {
+  background: linear-gradient(to top, #ccc, #f9f9f9);
+}
+#members .members-container .members .member:active {
+  background: linear-gradient(to bottom, #777, #ccc);
 }
 
 #leaderboard {
@@ -172,15 +179,15 @@ nav .navbar a:active {
 }
 #leaderboard .leaderboard-container #top-earners .earners:first-child {
   background: gold;
-  background: linear-gradient(to right, gold, rgb(255, 240, 152));
+  background: linear-gradient(to right, gold, gold, rgb(255, 240, 152));
 }
 #leaderboard .leaderboard-container #top-earners .earners:nth-child(2) {
   background: silver;
-  background: linear-gradient(to right, silver, rgb(228, 228, 228));
+  background: linear-gradient(to right, silver, silver, rgb(228, 228, 228));
 }
 #leaderboard .leaderboard-container #top-earners .earners:nth-child(3) {
   background: #cd7f32;
-  background: linear-gradient(to right, #cd7f32, #dcae81);
+  background: linear-gradient(to right, #cd7f32, #cd7f32, #dcae81);
 }
 #leaderboard .leaderboard-container #top-earners .earners:hover {
   transform: scale(1.05);
@@ -256,9 +263,6 @@ nav .navbar a:active {
   color: #777;
   grid-area: popularity;
   text-align: left;
-}
-#reviews .more-reviews {
-  font-size: 11px;
 }
 
 #about {
@@ -375,6 +379,10 @@ footer {
 
 .muted {
   color: #777;
+}
+
+.see-more {
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=styles.css.map */

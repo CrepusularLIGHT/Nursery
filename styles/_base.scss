@@ -145,12 +145,19 @@ nav {
             font-size: 8px;
             font-style: italic;
             text-transform: uppercase;
+            margin-top: 2px;
             margin-bottom: 4px;
           }
 
           .bio {
             font-size: 10px;
           }
+        }
+        &:hover {
+          background: linear-gradient(to top, $nav-hover-bg, $nav-bg);
+        }
+        &:active {
+          background: linear-gradient(to bottom, $nav-active-bg, $nav-hover-bg);
         }
       }
     }
@@ -186,17 +193,17 @@ nav {
 
         &:first-child {
           background: gold;
-          background: linear-gradient(to right, gold, rgb(255, 240, 152));
+          background: linear-gradient(to right, gold, gold, rgb(255, 240, 152));
         }
 
         &:nth-child(2) {
           background: silver;
-          background: linear-gradient(to right, silver, rgb(228, 228, 228));
+          background: linear-gradient(to right, silver, silver, rgb(228, 228, 228));
         }
 
         &:nth-child(3) {
           background: #cd7f32;
-          background: linear-gradient(to right, #cd7f32, #dcae81);
+          background: linear-gradient(to right, #cd7f32, #cd7f32, #dcae81);
         }
 
         &:hover {
@@ -290,10 +297,6 @@ nav {
       grid-area: popularity;
       text-align: left;
     }
-  }
-
-  .more-reviews {
-    font-size: 11px;
   }
 }
 
