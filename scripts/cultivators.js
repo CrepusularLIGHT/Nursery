@@ -18,7 +18,7 @@ let isExpanded = false;
 
 export async function loadCultivators() {
   try {
-    const response = await fetch("./data/cultivators.json");
+    const response = await fetch("./data/cultivators.json?v=1.1.1");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
