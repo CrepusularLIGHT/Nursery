@@ -108,6 +108,7 @@ nav {
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 8px;
       padding: 0 8px 4px 8px;
+      min-height: 350px;
 
       .member {
         margin: 2px 0px;

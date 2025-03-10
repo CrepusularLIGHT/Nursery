@@ -7,6 +7,9 @@ export async function loadMembers() {
     }
     const members = await response.json();
     renderMembers(members);
+    // Load GIF that takes longer to load
+    const gifImage = document.getElementById("bigGifImage");
+    gifImage.style.display = "block";
   } catch (error) {
     console.error("Error fetching members:", error);
   }
