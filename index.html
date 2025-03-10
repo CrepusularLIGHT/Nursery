@@ -48,15 +48,27 @@
     <meta name="twitter:creator" content="@RancorSweetly" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles/styles.css?v=1.1.2" />
+    <script>
+      const version = new Date().getTime();
+      document.write(`<link rel="stylesheet" href="styles.css?v=${version}">`);
+  </script>
+  <noscript>
+      <link rel="stylesheet" href="styles/styles.css"> <!-- Fallback if JavaScript is disabled -->
+  </noscript>
   </head>
   <body>
     <header>
       <h1 id="title">The Nursery</h1>
       <h2 id="subtitle">Grow Your Assets</h2>
-      <hr>
-      <h3 id="bible-quote" class="bible-text">"Dishonest money dwindles away, <br>but whoever gathers money little by little <br><b class="green">makes it grow</b>." <br><span class="muted small-text">- Proverbs 13:11 NIV</span></h3>
-      <hr>
+      <hr />
+      <h3 id="bible-quote" class="bible-text">
+        "Dishonest money dwindles away, <br />but whoever gathers money little
+        by little <br /><b class="green">makes it grow</b>." <br /><span
+          class="muted small-text"
+          >- Proverbs 13:11 NIV</span
+        >
+      </h3>
+      <hr />
     </header>
     <nav>
       <ul class="navbar">
@@ -79,10 +91,11 @@
       <section id="leaderboard">
         <h3>Top Cultivators</h3>
         <div class="leaderboard-container">
-          <ul id="top-earners">
-          </ul>
+          <ul id="top-earners"></ul>
         </div>
-        <a href="#" class="see-more" id="moreCultivators">See More Cultivators</a>
+        <a href="#" class="see-more" id="moreCultivators"
+          >See More Cultivators</a
+        >
       </section>
       <section id="reviews">
         <h3>Reviews</h3>
@@ -104,13 +117,24 @@
             <p>A place to store your money printers!</p>
           </div>
           <div class="image">
-            <img src="images/money-printers.webp" alt="Money Printers" loading="lazy"/>
+            <img
+              src="images/money-printers.webp"
+              alt="Money Printers"
+              loading="lazy"
+            />
           </div>
         </div>
         <h3>Why Do We Do It?</h3>
         <div class="about-container">
           <div class="image">
-            <img id="bigGifImage" src="images/lune-dance.gif" alt="La Lune dancing" loading="lazy" fetchpriority="low" style="display: none;"/>
+            <img
+              id="bigGifImage"
+              src="images/lune-dance.gif"
+              alt="La Lune dancing"
+              loading="lazy"
+              fetchpriority="low"
+              style="display: none"
+            />
           </div>
           <div class="text">
             <p>Helping the community while spreading the Word of God ✝</p>
@@ -129,5 +153,6 @@
       <p>The Nursery © 2025. All rights reserved.</p>
     </footer>
   </body>
-  <script type="module" src="scripts/main.js?v=1.1.2"></script>
+  <script id="js-file" type="module" src="scripts/main.js"></script>
+  <script src="scripts/cache-buster.js"></script>
 </html>
