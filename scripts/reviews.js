@@ -16,9 +16,6 @@ export async function loadReviews() {
     // Load reviews only with 5 stars
     const filteredReviews = reviews.filter((review) => review.rating === 5);
 
-        // DEBUG
-        console.log("Reviews:", filteredReviews); // Debugging purposes: display all reviews in console
-
     // Select container to load reviews
     const reviewContainer = document.getElementById("reviews-container");
 
