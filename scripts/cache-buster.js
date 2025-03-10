@@ -4,8 +4,8 @@
 const version = new Date().getTime();
 
 // Get the CSS file and update its href
-const cssFile = document.getElementById("css-file");
-cssFile.href = `styles/styles.css?v=${version}`;
+// const cssFile = document.getElementById("css-file");
+// cssFile.href = `styles/styles.css?v=${version}`;
 
 // Get the JS file and update its src
 const jsFile = document.getElementById("js-file");
