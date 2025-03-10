@@ -92,9 +92,9 @@ nav {
 
 #members {
   text-align: center;
-  width: $device-max-width-sm;
   margin: 2px auto;
   padding-top: 4px;
+  max-width: $device-max-width-sm;
 
   .members-container {
     border-radius: 8px;
@@ -105,7 +105,7 @@ nav {
 
     .members {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 8px;
       padding: 0 8px 4px 8px;
 
@@ -122,7 +122,7 @@ nav {
           padding: 2px 16px;
           img {
             height: 32px;
-            width: 32px;  
+            width: 32px;
             object-fit: cover;
             border-radius: 50%;
           }
@@ -198,7 +198,12 @@ nav {
 
         &:nth-child(2) {
           background: silver;
-          background: linear-gradient(to right, silver, silver, rgb(228, 228, 228));
+          background: linear-gradient(
+            to right,
+            silver,
+            silver,
+            rgb(228, 228, 228)
+          );
         }
 
         &:nth-child(3) {
@@ -266,6 +271,7 @@ nav {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
+    cursor: pointer;
 
     .author {
       font-weight: bold;
@@ -411,4 +417,127 @@ footer {
   text-align: center;
   padding: 8px 0px;
   font-size: 9px;
+}
+
+// Leave a Review
+#review {
+  text-align: center;
+  margin: 8px 0px;
+  max-width: $device-max-width-sm;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2 {
+    padding-bottom: 4px;
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 42px;
+  }
+
+  h4 {
+    font-size: 24px;
+    font-style: italic;
+    padding-bottom: 8px;
+  }
+
+  h5 {
+    font-size: 10px;
+    margin-bottom: 16px;
+    padding-top: 8px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .details {
+    font-size: 9px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 0px;
+  }
+
+  #reviewForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    padding: 16px 0px;
+
+    #name {
+      width: $form-width;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px inset $nav-bg;
+      font-size: 12px;
+      font-family: inherit;
+    }
+
+    #reviewText {
+      width: $form-width;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px inset $nav-bg;
+      font-size: 12px;
+      min-height: 64px;
+      resize: none;
+      text-align: left;
+      font-family: inherit;
+    }
+
+    #rating {
+      width: 112px;
+      margin: 0px;
+      padding: 4px 8px;
+      font-size: 12px;
+      background-color: $body-bg-color;
+      border-radius: 8px;
+      border: 1px inset $nav-bg;
+      cursor: pointer;
+      appearance: none;
+      text-align: center;
+
+      &:focus {
+        outline: none;
+        border-color: lighten($nav-bg, 10%);
+      }
+
+      option {
+        background-color: $nav-bg;
+        color: #fff;
+        border-radius: 8px;
+      }
+    }
+
+    #submit {
+      margin-top: 8px;
+      padding: 4px 8px;
+      border-radius: 8px;
+      background-color: $nav-bg;
+      color: $nav-text-color;
+      border: 1px outset $nav-bg;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: inherit;
+    }
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: $nav-bg;
+    p {
+      font-size: 9px;
+    }
+  }
 }

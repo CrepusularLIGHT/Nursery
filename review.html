@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leave a Review</title>
+    <link rel="stylesheet" href="styles/styles.css?v1.1.1" />
+  </head>
+  <body>
+    <div id="review">
+      <h2>Leave a Review</h2>
+      <p>FOR</p>
+      <h3>The Nursery</h3>
+      <h4>Grow Your Assets</h4>
+      <p>A SERVICE BY</p>
+      <h5>RancorSweetly, La Lune, Donnie Deru & Not10crabs</h5>
+
+      <!-- Review Form -->
+      <form id="reviewForm" autocomplete="off">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <textarea
+          id="reviewText"
+          placeholder="Write your review..."
+          required
+        ></textarea>
+        <select id="rating" required>
+          <option value="5" selected>⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+        <button id="submit" type="submit">Submit Review</button>
+      </form>
+
+      <p class="details">
+        This form will be added to the list of all reviews and will appear on
+        the website.
+      </p>
+      <p class="details">Only 1 review is allowed per hour to prevent spam.</p>
+      <p class="details">
+        If you have any questions about your review or experience, contact
+        RancorSweetly on X:
+        <a href="https://x.com/rancorsweetly">x.com/rancorsweetly</a>
+      </p>
+      <footer>
+        <p>&copy; 2025 The Nursery. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script type="module" src="scripts/review.js"></script>
+  </body>
+</html>

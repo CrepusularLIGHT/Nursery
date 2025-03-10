@@ -86,9 +86,9 @@ nav .navbar a:active {
 
 #members {
   text-align: center;
-  width: 420px;
   margin: 2px auto;
   padding-top: 4px;
+  max-width: 420px;
 }
 #members .members-container {
   border-radius: 8px;
@@ -99,7 +99,7 @@ nav .navbar a:active {
 }
 #members .members-container .members {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 8px;
   padding: 0 8px 4px 8px;
 }
@@ -237,6 +237,7 @@ nav .navbar a:active {
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+  cursor: pointer;
 }
 #reviews .review .author {
   font-weight: bold;
@@ -362,6 +363,113 @@ nav .navbar a:active {
 footer {
   text-align: center;
   padding: 8px 0px;
+  font-size: 9px;
+}
+
+#review {
+  text-align: center;
+  margin: 8px 0px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#review h2 {
+  padding-bottom: 4px;
+  font-size: 32px;
+}
+#review h3 {
+  font-size: 42px;
+}
+#review h4 {
+  font-size: 24px;
+  font-style: italic;
+  padding-bottom: 8px;
+}
+#review h5 {
+  font-size: 10px;
+  margin-bottom: 16px;
+  padding-top: 8px;
+  font-weight: 500;
+}
+#review p {
+  font-size: 14px;
+}
+#review .details {
+  font-size: 9px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 0px;
+}
+#review #reviewForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0px;
+}
+#review #reviewForm #name {
+  width: 160px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px inset #f9f9f9;
+  font-size: 12px;
+  font-family: inherit;
+}
+#review #reviewForm #reviewText {
+  width: 160px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px inset #f9f9f9;
+  font-size: 12px;
+  min-height: 64px;
+  resize: none;
+  text-align: left;
+  font-family: inherit;
+}
+#review #reviewForm #rating {
+  width: 112px;
+  margin: 0px;
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px inset #f9f9f9;
+  cursor: pointer;
+  appearance: none;
+  text-align: center;
+}
+#review #reviewForm #rating:focus {
+  outline: none;
+  border-color: white;
+}
+#review #reviewForm #rating option {
+  background-color: #f9f9f9;
+  color: #fff;
+  border-radius: 8px;
+}
+#review #reviewForm #submit {
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px outset #f9f9f9;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+}
+#review footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #f9f9f9;
+}
+#review footer p {
   font-size: 9px;
 }
 

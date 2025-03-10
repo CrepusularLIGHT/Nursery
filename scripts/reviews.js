@@ -1,7 +1,6 @@
 import { generateStars } from "./utils.js";
 
-//  LOAD REVIEWS FROM JSON FILE
-// Fetch json file and display top 3 reviews with 5
+// Load reviews from JSON file
 export async function loadReviews() {
   const jsFile = "./data/reviews.json";
   try {
@@ -11,8 +10,14 @@ export async function loadReviews() {
     }
     const reviews = await response.json();
 
+    // Sort reviews by popularity in descending order
+    reviews.sort((a, b) => b.popularity - a.popularity); // Sorting in-place
+
     // Load reviews only with 5 stars
     const filteredReviews = reviews.filter((review) => review.rating === 5);
+
+        // DEBUG
+        console.log("Reviews:", filteredReviews); // Debugging purposes: display all reviews in console
 
     // Select container to load reviews
     const reviewContainer = document.getElementById("reviews-container");
@@ -23,11 +28,11 @@ export async function loadReviews() {
       const stars = generateStars(review.rating);
       reviewElement.classList.add("review");
       reviewElement.innerHTML = `
-        <div class="author">${review.author}</div>
+        <div class="author">${review.name}</div>
         <div class="rating">Rating: ${stars}</div>
-        <div class="comment">${review.comment}</div>
+        <div class="comment">${review.review}</div>
         <div class="popularity">+${review.popularity}</div>
-        <div class="date">${review.date}</div>
+        <div class="date">${review.timestamp}</div>
       `;
       reviewContainer.appendChild(reviewElement);
     });
