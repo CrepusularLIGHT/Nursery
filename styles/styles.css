@@ -273,13 +273,13 @@ nav .navbar a:active {
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 12px;
 }
 #about .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 4px 0px;
+  font-size: 14px;
 }
 #about .about-container img {
   max-width: 200px;
@@ -292,6 +292,7 @@ nav .navbar a:active {
   width: 100%;
   height: 200px;
   overflow: hidden;
+  font-size: 12px;
 }
 #about .card-container #prev-btn,
 #about .card-container #next-btn {
